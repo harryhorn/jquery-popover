@@ -111,6 +111,8 @@ You should keep all the original class names used in the file as they are the on
 You can use the original <tt>lib/popover.scss</tt> to generate a new popover.css file if you prefer working with
 SCSS and compass.
 
+If you change the size of the triangle in CSS you need to also update this size in <tt>function calcPopoverPos</tt> in the plugin JS file.
+
 == License:
 
 (The MIT License)
