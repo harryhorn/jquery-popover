@@ -1,6 +1,6 @@
 @import "compass/css3";
 
-$triangle-size: 25px;
+$triangle-size: 20px;
 
 .popover {
   position: absolute;
@@ -11,7 +11,7 @@ $triangle-size: 25px;
   background-color: white;
   border: 3px solid black;
 	@include border-radius(4px);
-	@include box-shadow(rgba(0, 0, 0, 0.2), 0, 0, 10px);
+	@include box-shadow(rgba(0, 0, 0, 0.2), 0, 0, 20px);
 	@include transition(opacity, 0.25s, linear);
   
   &.active {
@@ -51,7 +51,7 @@ $triangle-size: 25px;
     font-weight: bold;
     margin: 0;
     padding: 3px;
-    height: 40px;
+    height: 1.25em;
     color: white;
     background-color: black;
   	@include background-image(linear-gradient(color-stops(rgba(255, 255, 255, 0.4) 0.2, 

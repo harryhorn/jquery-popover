@@ -22,37 +22,35 @@
 #topright {
   right: 0;
   top: 0;
-  background-color: green;
 }
 
-/* line 24, ../../app/stylesheets/test-popover.scss */
+/* line 23, ../../app/stylesheets/test-popover.scss */
 #bottomleft {
   left: 0;
   bottom: 0;
 }
 
-/* line 29, ../../app/stylesheets/test-popover.scss */
+/* line 28, ../../app/stylesheets/test-popover.scss */
 #bottomright {
   right: 0;
   bottom: 0;
-  background-color: green;
 }
 
-/* line 35, ../../app/stylesheets/test-popover.scss */
+/* line 33, ../../app/stylesheets/test-popover.scss */
 #middle {
   left: 50%;
   top: 50%;
   background-color: green;
 }
 
-/* line 41, ../../app/stylesheets/test-popover.scss */
+/* line 39, ../../app/stylesheets/test-popover.scss */
 #middleleft {
   left: 0;
   top: 50%;
   background-color: green;
 }
 
-/* line 47, ../../app/stylesheets/test-popover.scss */
+/* line 45, ../../app/stylesheets/test-popover.scss */
 #middleright {
   right: 0;
   top: 30%;

@@ -121,7 +121,7 @@
 				deltaY: 0,
 				triangleX: 0,
 				triangleY: 0,
-		    triangleSize: 25, // needs to be updated if triangle changed in css
+		    triangleSize: 20, // needs to be updated if triangle changed in css
 		    docWidth: $(document).width(),
 		    docHeight: $(document).height(),
 		    popoverWidth: settings.popover$.outerWidth(),
