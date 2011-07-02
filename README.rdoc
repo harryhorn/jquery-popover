@@ -6,8 +6,9 @@
 
 JQuery-popover is a JQuery plugin that provides an easy way to create iPad like popovers.
  
-Forked and based on {juggy/jquery-popover}[http://github.com/juggy/jquery-popover] by Julien Guimont, 
-JQuery-popover has been significantly refactored & enhanced. 
+Forked and based on {juggy/jquery-popover}[http://github.com/juggy/jquery-popover] by Julien Guimont.
+ 
+JQuery-popover has been significantly refactored & enhanced. See details below.
 
 == Install
 
@@ -21,8 +22,8 @@ You can copy the test folder to your HTTP root public folder and use test.html t
 
 == How to use
 
-With JQuery-popover you can attach a popover with any HTML header and content to the click 
-action of any element. For Example:
+With JQuery-popover you can attach a popover to the click 
+action of any DOM element. You set the popover header and content by providing a JQuery selector. For Example:
 
     <a id="my-button">Popover</a>
 
@@ -42,16 +43,61 @@ action of any element. For Example:
     $('#my-button').popover({header: '#my-popover > .header',
         content: '#my-popover > .content'});
 
-== Features
+JQuery popover detaches the header and content from their original DOM location and attaches them to the hidden popover.
+Based on the size and location of the popover as it relates to the originating element, the popover will be optimally placed
+on the screen. The popup can appear on all 4 sides of the originating element. To limit the popup to certain directions see 
+the Options Documentation.
 
+== Features & Changes
 
+New features:
+* Popover can now be created on all sides of originating button
+* Options to prevent popover from opening in certain directions
+* Keyboard support for popover closure via ESC
+* Optional screen padding value
+* Optional z-index value for popup
 
-== Changes for fork
-changed plugin name to jquery.popover to follow jquery conventions
-moved to scss from sass
+Other changes:
+* Changes plugin name to jquery.popover.js to follow jquery conventions
+* Popover wrapper method now returns the wrapped set
+* Fixed various bugs
+* General cleanup and code refactoring of JS and css
+* Moved lib popover.sass file to popover.scss and use compass
+* Added test files
+* Added the documentation you are reading ...
 
+Original features:
+* CSS stylable iPad like popover with arrow
+* Optional offset for popover origin
+* Optional popup opened event callback
+* Optional popup closed event callback
 
+== Options Documentation
 
+All options to the popover wrapper method are passed via a single options hash and the method returns
+the wrapped set.
+
+    popover(options)
+
+Options description:
+
+* <tt>header</tt> - <b>requried</b> - (Selector|Element) JQuery selector for popover header 
+* <tt>content</tt> - <b>requried</b> - (Selector|Element) JQuery selector for popover content 
+* <tt>openEvent: null</tt> - (Function) - callback function to be called after popover is opened
+* <tt>closeEvent: null</tt> - (Function) - callback function to be called after popover is closed
+* <tt>offsetX: 0</tt> - (Number) - Fixed X offset for popover location
+* <tt>offsetY: 0</tt> - (Number) - Fixed Y offset for popover location
+* <tt>zindex: 100000</tt> - (Number) - css z-index of the popover
+* <tt>padding: 18</tt> - (Number) - minimum padding to be kept between popover borders and edge of document
+* <tt>closeOnEsc: true</tt> - (Boolean) - pass false to disable listening to keyboard ESC to close popover
+* <tt>preventLeft: false</tt> - (Boolean) - pass true to prevent popover from opening on left side
+* <tt>preventRight: false</tt> - (Boolean) - pass true to prevent popover from opening on right side
+* <tt>preventTop: false</tt> - (Boolean) - pass true to prevent popover from opening on top side
+* <tt>preventBottom: false</tt> - (Boolean) - pass true to prevent popover from opening on bottom side
+
+== Supported events
+
+== Popover Styling
 
 
 == License:
