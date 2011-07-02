@@ -40,8 +40,7 @@ action of any DOM element. You set the popover header and content by providing a
 
     ...
 
-    $('#my-button').popover({header: '#my-popover > .header',
-        content: '#my-popover > .content'});
+    $('#my-button').popover({header: '#my-popover > .header', content: '#my-popover > .content'});
 
 JQuery popover detaches the header and content from their original DOM location and attaches them to the hidden popover.
 Based on the size and location of the popover as it relates to the originating element, the popover will be optimally placed
