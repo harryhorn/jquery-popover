@@ -57,8 +57,6 @@ New features:
 * Optional screen padding value
 * Optional z-index value for popup
 
-<br>
-
 Other changes:
 * Changes plugin name to jquery.popover.js to follow jquery conventions
 * Popover wrapper method now returns the wrapped set
@@ -67,8 +65,6 @@ Other changes:
 * Moved lib popover.sass file to popover.scss format and to use compass
 * Added test files
 * Added the documentation you are reading ...
-
-<br>
 
 Original features:
 * CSS stylable iPad like popover with arrow
