@@ -46,7 +46,7 @@ action of any DOM element. You set the popover header and content by providing a
 JQuery popover detaches the header and content from their original DOM location and attaches them to the hidden popover.
 Based on the size and location of the popover as it relates to the originating element, the popover will be optimally placed
 on the screen. The popup can appear on all 4 sides of the originating element. To limit the popup to certain directions see 
-the Options Documentation.
+Options Documentation below.
 
 == Features & Changes
 
@@ -57,14 +57,16 @@ New features:
 * Optional screen padding value
 * Optional z-index value for popup
 
+
 Other changes:
 * Changes plugin name to jquery.popover.js to follow jquery conventions
 * Popover wrapper method now returns the wrapped set
 * Fixed various bugs
-* General cleanup and code refactoring of JS and css
-* Moved lib popover.sass file to popover.scss and use compass
+* General cleanup and code refactoring of JS and CSS
+* Moved lib popover.sass file to popover.scss format and to use compass
 * Added test files
 * Added the documentation you are reading ...
+
 
 Original features:
 * CSS stylable iPad like popover with arrow
@@ -97,8 +99,19 @@ Options description:
 
 == Supported events
 
+You can programmatically open and close a popover by using the following:
+
+    $('#button').trigger('showPopover'); 
+
+    $('#button').trigger('hidePopover'); 
+
 == Popover Styling
 
+The popover style provided in popover.css is a basic style to mimic the iPad popover look & feel but you can style it anyway you like. 
+You should keep all the original class names used in the file as they are the ones used by the plugin.
+
+You can use the original <tt>lib/popover.scss</tt> to generate a new popover.css file if you prefer working with
+SCSS and compass.
 
 == License:
 
