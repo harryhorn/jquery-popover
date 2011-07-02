@@ -1,0 +1,60 @@
+/* line 1, ../../app/stylesheets/test-popover.scss */
+#content, #content2, #content3, #content4, #content5 {
+  width: 20em;
+}
+
+/* line 5, ../../app/stylesheets/test-popover.scss */
+.test-but {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  background-color: red;
+  border: 1px solid black;
+}
+
+/* line 13, ../../app/stylesheets/test-popover.scss */
+#topleft {
+  left: 0;
+  top: 0;
+}
+
+/* line 18, ../../app/stylesheets/test-popover.scss */
+#topright {
+  right: 0;
+  top: 0;
+  background-color: green;
+}
+
+/* line 24, ../../app/stylesheets/test-popover.scss */
+#bottomleft {
+  left: 0;
+  bottom: 0;
+}
+
+/* line 29, ../../app/stylesheets/test-popover.scss */
+#bottomright {
+  right: 0;
+  bottom: 0;
+  background-color: green;
+}
+
+/* line 35, ../../app/stylesheets/test-popover.scss */
+#middle {
+  left: 50%;
+  top: 50%;
+  background-color: green;
+}
+
+/* line 41, ../../app/stylesheets/test-popover.scss */
+#middleleft {
+  left: 0;
+  top: 50%;
+  background-color: green;
+}
+
+/* line 47, ../../app/stylesheets/test-popover.scss */
+#middleright {
+  right: 0;
+  top: 30%;
+  background-color: green;
+}
