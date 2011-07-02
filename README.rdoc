@@ -48,7 +48,7 @@ Based on the size and location of the popover as it relates to the originating e
 on the screen. The popup can appear on all 4 sides of the originating element. To limit the popup to certain directions see 
 Options Documentation below.
 
-== Features & Changes
+== Features & changes
 
 New features:
 * Popover can now be created on all sides of originating button
@@ -72,7 +72,7 @@ Original features:
 * Optional popup opened event callback
 * Optional popup closed event callback
 
-== Options Documentation
+== Options documentation
 
 All options to the popover wrapper method are passed via a single options hash and the method returns
 the wrapped set.
@@ -103,7 +103,7 @@ You can programmatically open and close a popover by using the following:
 
     $('#button').trigger('hidePopover'); 
 
-== Popover Styling
+== Popover styling
 
 The popover style provided in popover.css is a basic style to mimic the iPad popover look & feel but you can style it anyway you like. 
 You should keep all the original class names used in the file as they are the ones used by the plugin.
