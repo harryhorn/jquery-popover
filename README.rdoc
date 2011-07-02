@@ -103,6 +103,10 @@ You can programmatically open and close a popover by using the following:
 
     $('#button').trigger('hidePopover'); 
 
+To close the currently open popover, for example from the cancel button of a popup dialog, do the following:
+
+    $(document).trigger('hidePopover');
+
 == Popover styling
 
 The popover style provided in popover.css is a basic style to mimic the iPad popover look & feel but you can style it anyway you like. 

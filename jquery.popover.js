@@ -30,7 +30,7 @@
 
 	  settings.triangle$ = $('.triangle', settings.popover$);
 
-	  // Document click closes active popover
+	  // document click closes active popover
 	  $.fn.popover.openedPopup = null;
 	  $(document).bind("click", function(event) {
 	    if ($.fn.popover.openedPopup != null
@@ -39,6 +39,11 @@
 	      $.fn.popover.openedPopup.trigger('hidePopover');
 	    }
 	  });
+	
+		// document hidePopover causes active popover to close
+		$(document).bind("hidePopover", function(event) {
+			$.fn.popover.openedPopup.trigger('hidePopover');
+		});
 	
 		// keyboard callback
 		function keyDown(event) {
