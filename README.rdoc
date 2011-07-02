@@ -4,42 +4,61 @@
 
 == Description:
 
-Forked from {juggy/jquery-popover}[http://github.com/juggy/jquery-popover]
+JQuery-popover is a JQuery plugin that provides an easy way to create iPad like popovers.
+ 
+Forked and based on {juggy/jquery-popover}[http://github.com/juggy/jquery-popover] by Julien Guimont, 
+JQuery-popover has been significantly refactored & enhanced. 
 
-Major changes and rewrite.
+== Install
 
-== Changes for fork:
+Simply:
+
+* copy jquery.popover.js to your /javascripts folder
+* copy popover.css to your /stylesheets folder
+* make sure to reference the above JS and CSS files in your HTML
+
+You can copy the test folder to your HTTP root public folder and use test.html to test the plugin
+
+== How to use
+
+With JQuery-popover you can attach a popover with any HTML header and content to the click 
+action of any element. For Example:
+
+    <a id="my-button">Popover</a>
+
+    ...
+ 
+   <div id="my-popover">
+      <div class="header">
+      ...
+      </div>
+      <div class="content">
+      ...
+      </div>
+    </div>
+
+    ...
+
+    $('#my-button').popover({header: '#my-popover > .header',
+        content: '#my-popover > .content'});
+
+== Features
+
+
+
+== Changes for fork
 changed plugin name to jquery.popover to follow jquery conventions
 moved to scss from sass
 
 
-== Original readme:
 
-		<a id="my-button">Popover</a>
-
-		...
-
-		<div id="my-popover">
-		  <div class="header">
-		    ...
-		  </div>
-		  <div class="content">
-		    ...
-		  </div>
-		</div>
-
-
-		...
-
-		$('#my-button').popover({header: '#my-popover > .header',
-		    content: '#my-popover > .content'});
 
 
 == License:
 
 (The MIT License)
 
-Copyright (c) 2009 Jonas Nicklas
+Copyright (c) 2011 Harry Hornreich
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
