@@ -42,7 +42,8 @@
 	
 		// document hidePopover causes active popover to close
 		$(document).bind("hidePopover", function(event) {
-			$.fn.popover.openedPopup.trigger('hidePopover');
+			if ($.fn.popover.openedPopup != null)
+				$.fn.popover.openedPopup.trigger('hidePopover');
 		});
 	
 		// keyboard callback
@@ -198,12 +199,10 @@
 
 			if (coord.triangleX > 0) {
 				settings.triangle$.css('left', coord.triangleX);
-				// settings.triangle$.css('top', 0);
 			}
 			
 			if (coord.triangleY > 0) {
 				settings.triangle$.css('top', coord.triangleY);
-				// settings.triangle$.css('left', 0);
 			}
 
 			// position popover
@@ -254,8 +253,14 @@
 	    button.addClass("popover-button");
 			if (settings.closeOnEsc)
 				$(document).bind('keydown', keyDown);
-	    button.bind('click', function() { showPopover(button) });
-	    button.bind('showPopover', function() { showPopover(button) });
+	    button.bind('click', function() { 
+				showPopover(button);
+				return false;
+			});
+	    button.bind('showPopover', function() { 
+				showPopover(button);
+				return false;
+			});
 	    button.bind('hidePopover', function() {
 	      button.removeClass('popover-on');
 	      settings.popover$.removeClass("active").attr("style", "").hide();
