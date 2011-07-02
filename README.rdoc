@@ -57,6 +57,7 @@ New features:
 * Optional screen padding value
 * Optional z-index value for popup
 
+<br>
 
 Other changes:
 * Changes plugin name to jquery.popover.js to follow jquery conventions
@@ -67,6 +68,7 @@ Other changes:
 * Added test files
 * Added the documentation you are reading ...
 
+<br>
 
 Original features:
 * CSS stylable iPad like popover with arrow
@@ -83,8 +85,8 @@ the wrapped set.
 
 Options description:
 
-* <tt>header</tt> - <b>requried</b> - (Selector|Element) JQuery selector for popover header 
-* <tt>content</tt> - <b>requried</b> - (Selector|Element) JQuery selector for popover content 
+* <tt>header</tt> - <b>required</b> - (Selector|Element) JQuery selector for popover header 
+* <tt>content</tt> - <b>required</b> - (Selector|Element) JQuery selector for popover content 
 * <tt>openEvent: null</tt> - (Function) - callback function to be called after popover is opened
 * <tt>closeEvent: null</tt> - (Function) - callback function to be called after popover is closed
 * <tt>offsetX: 0</tt> - (Number) - Fixed X offset for popover location
