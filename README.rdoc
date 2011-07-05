@@ -96,6 +96,9 @@ Options description:
 
 == Supported events
 
+When a popover is opened it triggers a document <tt>popoverOpened</tt> event and when a popover is closed 
+it triggers a document <tt>popoverClosed</tt> event.
+
 You can programmatically open and close a popover by using the following:
 
     $('#button').trigger('showPopover'); 
