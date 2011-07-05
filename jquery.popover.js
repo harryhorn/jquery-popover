@@ -34,7 +34,7 @@
 	  $.fn.popover.openedPopup = null;
 	  $(document).bind("click", function(event) {
 	    if ($.fn.popover.openedPopup != null
-	        && ($(event.target).parents(".popover").length === 0)
+	        && ($(event.target).parents(".popover").length == 0)
 	        && (!$(event.target).hasClass('popover-button'))) {
 	      $.fn.popover.openedPopup.trigger('hidePopover');
 	    }
@@ -238,13 +238,14 @@
 	    //Timeout for webkit transitions to take effect
 	    setTimeout(function() {
 	      settings.popover$.addClass("active");
-	      // Fixes some browser bugs
-	      $(window).resize();
 	    }, 0);
 	
 	    if ($.isFunction(settings.openEvent)) settings.openEvent();
 	    $.fn.popover.openedPopup = button;
 	    button.addClass('popover-on');
+	
+			$(document).trigger('popoverOpened');
+	
 	    return false;
 	  }
 
@@ -263,15 +264,12 @@
 			});
 	    button.bind('hidePopover', function() {
 	      button.removeClass('popover-on');
+				$(document).trigger('popoverClosed');
 	      settings.popover$.removeClass("active").attr("style", "").hide();
 	      if ($.isFunction(settings.closeEvent)) {
 	        settings.closeEvent();
 	      }
 	      $.fn.popover.openedPopup = null;
-	      setTimeout(function() {
-	        // Fixes some browser bugs
-	        $(window).resize();
-	      }, 0);
 	      return false;
 	    });
 	  });
