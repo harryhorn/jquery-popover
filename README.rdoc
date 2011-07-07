@@ -82,7 +82,7 @@ Options description:
 
 * <tt>header</tt> - <b>required</b> - (Selector|Element) - JQuery selector for popover header 
 * <tt>content</tt> - <b>required</b> - (Selector|Element) - JQuery selector for popover content 
-* <tt>id</tt> - <b>optional</b> - (String) - id for created popover
+* <tt>id: ''</tt> - (String) - id for created popover
 * <tt>openEvent: null</tt> - (Function) - callback function to be called after popover is opened
 * <tt>closeEvent: null</tt> - (Function) - callback function to be called after popover is closed
 * <tt>offsetX: 0</tt> - (Number) - Fixed X offset for popover location
