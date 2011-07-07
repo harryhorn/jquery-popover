@@ -6,6 +6,7 @@
 		
 		// settings stored options and state
 	  var settings = $.extend({
+	    id: '',						// id for created popover
 	    openEvent: null,	// callback function to be called when popup opened
 	    closeEvent: null, // callback function to be called when popup closed
 	    offsetX: 0,				// fixed offset to correct popup X position
@@ -20,7 +21,7 @@
 	  }, options || {});
 
 	  // HTML popover
-	  settings.popover$ = $('<div class="popover">'
+	  settings.popover$ = $('<div class="popover" id="' + settings.id + '">'
 	        + '<div class="triangle"></div>'
 	        + '<div class="header"></div>'
 	        + '<div class="content"></div>'
