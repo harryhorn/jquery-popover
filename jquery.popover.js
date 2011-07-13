@@ -100,8 +100,16 @@
 				possibleDir.left = false;
 			if (settings.preventRight)
 				possibleDir.right = false;
-				
-			 var dir = 'right';
+
+			// determine default direction if nothing works out
+			// make sure it is not one of the prevented directions
+			var dir = 'right';
+			if (settings.preventRight)
+				dir = 'bottom';
+			if (settings.preventBottom)
+				dir = 'top';
+			if (settings.preventTop)
+				dir = 'left';
 
 			if (possibleDir.right)
 				dir = 'right';
