@@ -6,7 +6,7 @@
 
 JQuery-popover is a JQuery plugin that provides an easy way to create iPad like popovers.
 
-http://github.com/harryhorn/jquery-popover/jquery.popover.png
+http://github.com/harryhorn/jquery-popover/blob/master/jquery.popover.png
  
 Forked and based on {juggy/jquery-popover}[http://github.com/juggy/jquery-popover] by Julien Guimont.
  
