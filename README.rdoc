@@ -20,8 +20,6 @@ Simply:
 * copy popover.css to your /stylesheets folder
 * make sure to reference the above JS and CSS files in your HTML
 
-You can copy the test folder to your HTTP root public folder and use test.html to test the plugin
-
 == How to use
 
 With JQuery-popover you can attach a popover to the click 
