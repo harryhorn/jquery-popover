@@ -5,6 +5,8 @@
 == Description:
 
 JQuery-popover is a JQuery plugin that provides an easy way to create iPad like popovers.
+
+![Popover example](jquery.popover.png)
  
 Forked and based on {juggy/jquery-popover}[http://github.com/juggy/jquery-popover] by Julien Guimont.
  
@@ -119,6 +121,15 @@ You can use the original <tt>lib/popover.scss</tt> to generate a new popover.css
 SCSS and compass.
 
 If you change the size of the triangle in CSS you need to also update this size in <tt>function calcPopoverPos</tt> in the plugin JS file.
+
+== Testing
+
+A suite of [Jasmine](http://github.com/pivotal/jasmine) tests has been added that also make use also
+of the [Jasmine-jquery](https://github.com/velesin/jasmine-jquery) library.
+
+To run the Jasmine tests simply open the <tt>SpecRunner.html</tt> file in the <tt>Jasmine</tt> folder.
+
+The demo folder holds a <tt>demo.html</tt> file that demonstrates the popover opening on different sides based on constraints.
 
 == License:
 

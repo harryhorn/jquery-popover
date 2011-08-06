@@ -1,0 +1,29 @@
+= Early Versions
+
+New features:
+* Popover can now be created on all sides of originating button
+* Options to prevent popover from opening in certain directions
+* Keyboard support for popover closure via ESC
+* Optional screen padding value
+* Optional z-index value for popup
+
+Other changes:
+* Changes plugin name to jquery.popover.js to follow jquery conventions
+* Popover wrapper method now returns the wrapped set
+* Fixed various bugs
+* General cleanup and code refactoring of JS and CSS
+* Moved lib popover.sass file to popover.scss format and to use compass
+* Added test files
+* Added the documentation you are reading ...
+
+Original features:
+* CSS stylable iPad like popover with arrow
+* Optional offset for popover origin
+* Optional popup opened event callback
+* Optional popup closed event callback
+
+= Version 0.2.0
+
+* Added jasmine specs
+* reorganized directory structure
+* added this file - yay!

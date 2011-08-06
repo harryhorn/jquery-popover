@@ -1,0 +1,49 @@
+#content, #content2, #content3, #content4, #content5 {
+	width: 20em;
+}
+
+.test-but {
+  position: absolute;	
+	width: 10em;
+	height: 10em;
+	background-color: red;
+	border: 1px solid black;
+}
+
+#topleft {
+	left: 0;
+	top: 0;
+}
+
+#topright {
+	right: 0;
+	top: 0;
+}
+
+#bottomleft {
+	left: 0;
+	bottom: 0;
+}
+
+#bottomright {
+	right: 0;
+	bottom: 0;
+}
+
+#middle {
+	left: 50%;
+	top: 50%;
+	background-color: green;
+}
+
+#middleleft {
+	left: 0;
+	top: 50%;
+	background-color: green;
+}
+
+#middleright {
+	right: 0;
+	top: 30%;
+	background-color: green;
+}
