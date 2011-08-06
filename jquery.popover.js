@@ -77,7 +77,7 @@
 				possibleDir.top = true;
 			}
 
-	    if (coord.buttonOffset.left + coord.buttonWidth + coord.triangleSize + coord.popoverwidth <= 
+	    if (coord.buttonOffset.left + coord.buttonWidth + coord.triangleSize + coord.popoverWidth <= 
 									coord.docWidth - settings.padding) {
 				possibleDir.right = true;
 			}
