@@ -25,5 +25,9 @@ Original features:
 = Version 0.2.0
 
 * Added jasmine specs
-* reorganized directory structure
-* added this file - yay!
+* Reorganized directory structure
+* Added this file - yay!
+
+= Version 0.2.1
+
+* Improved the readme
