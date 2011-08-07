@@ -122,7 +122,7 @@ If you change the size of the triangle in CSS you need to also update this size 
 
 == Testing
 
-A suite of Jasmine[http://github.com/pivotal/jasmine] specs has been added that also make use also
+A suite of Jasmine[http://github.com/pivotal/jasmine] specs has been added that also make use
 of the Jasmine-jquery[https://github.com/velesin/jasmine-jquery] library.
 
 To run the Jasmine specs simply open <tt>jasmine/SpecRunner.html</tt> in a browser.
