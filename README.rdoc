@@ -122,12 +122,12 @@ If you change the size of the triangle in CSS you need to also update this size 
 
 == Testing
 
-A suite of Jasmine[http://github.com/pivotal/jasmine] tests has been added that also make use also
+A suite of Jasmine[http://github.com/pivotal/jasmine] specs has been added that also make use also
 of the Jasmine-jquery[https://github.com/velesin/jasmine-jquery] library.
 
-To run the Jasmine tests simply open the <tt>SpecRunner.html</tt> file in the <tt>Jasmine</tt> folder.
+To run the Jasmine specs simply open <tt>jasmine/SpecRunner.html</tt> in a browser.
 
-The demo folder holds a <tt>demo.html</tt> file that demonstrates the popover opening on different sides based on constraints.
+See <tt>demo/demo.html</tt> for a demonstration of various popovers opening on different sides based on constraints.
 
 == License:
 
