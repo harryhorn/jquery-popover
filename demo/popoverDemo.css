@@ -1,9 +1,9 @@
-/* line 1, ../../app/stylesheets/test-popover.scss */
+/* line 1, ../../app/stylesheets/popoverDemo.scss */
 #content, #content2, #content3, #content4, #content5 {
   width: 20em;
 }
 
-/* line 5, ../../app/stylesheets/test-popover.scss */
+/* line 5, ../../app/stylesheets/popoverDemo.scss */
 .test-but {
   position: absolute;
   width: 10em;
@@ -12,47 +12,59 @@
   border: 1px solid black;
 }
 
-/* line 13, ../../app/stylesheets/test-popover.scss */
+/* line 13, ../../app/stylesheets/popoverDemo.scss */
 #topleft {
   left: 0;
   top: 0;
 }
 
-/* line 18, ../../app/stylesheets/test-popover.scss */
+/* line 18, ../../app/stylesheets/popoverDemo.scss */
 #topright {
   right: 0;
   top: 0;
 }
 
-/* line 23, ../../app/stylesheets/test-popover.scss */
+/* line 23, ../../app/stylesheets/popoverDemo.scss */
 #bottomleft {
   left: 0;
   bottom: 0;
 }
 
-/* line 28, ../../app/stylesheets/test-popover.scss */
+/* line 28, ../../app/stylesheets/popoverDemo.scss */
 #bottomright {
   right: 0;
   bottom: 0;
 }
 
-/* line 33, ../../app/stylesheets/test-popover.scss */
+/* line 33, ../../app/stylesheets/popoverDemo.scss */
 #middle {
   left: 50%;
   top: 50%;
   background-color: green;
 }
 
-/* line 39, ../../app/stylesheets/test-popover.scss */
+/* line 39, ../../app/stylesheets/popoverDemo.scss */
 #middleleft {
   left: 0;
   top: 50%;
   background-color: green;
 }
 
-/* line 45, ../../app/stylesheets/test-popover.scss */
+/* line 45, ../../app/stylesheets/popoverDemo.scss */
 #middleright {
   right: 0;
   top: 30%;
   background-color: green;
+}
+
+/* line 51, ../../app/stylesheets/popoverDemo.scss */
+#box1 {
+  left: 15em;
+  top: 0;
+}
+
+/* line 56, ../../app/stylesheets/popoverDemo.scss */
+#box2 {
+  left: 30em;
+  top: 0;
 }
