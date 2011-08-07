@@ -17,7 +17,7 @@ JQuery-popover has been significantly refactored & enhanced. See details below.
 Simply:
 
 * copy jquery.popover.js to your /javascripts folder
-* copy popover.css to your /stylesheets folder
+* copy jquery.popover.css to your /stylesheets folder
 * make sure to reference the above JS and CSS files in your HTML
 
 == How to use
@@ -61,7 +61,7 @@ Other changes:
 * Popover wrapper method now returns the wrapped set
 * Fixed various bugs
 * General cleanup and code refactoring of JS and CSS
-* Moved lib popover.sass file to popover.scss format and to use compass
+* Moved lib jquery.popover.sass file to jquery.popover.scss format and to use compass
 * Added test files
 * Added the documentation you are reading ...
 
@@ -112,15 +112,15 @@ To close the currently open popover, for example from the cancel button of a pop
 
 == Popover styling
 
-The popover style provided in popover.css is a basic style to mimic the iPad popover look & feel but you can style it anyway you like. 
+The popover style provided in jquery.popover.css is a basic style to mimic the iPad popover look & feel but you can style it anyway you like. 
 You should keep all the original class names used in the file as they are the ones used by the plugin.
 
-You can use the original <tt>lib/popover.scss</tt> to generate a new popover.css file if you prefer working with
+You can use the original <tt>lib/jquery.popover.scss</tt> to generate a new jquery.popover.css file if you prefer working with
 SCSS and compass.
 
 If you change the size of the triangle in CSS you need to also update this size in <tt>function calcPopoverPos</tt> in the plugin JS file.
 
-== Testing
+== Specing & Testing
 
 A suite of Jasmine[http://github.com/pivotal/jasmine] specs has been added that also make use
 of the Jasmine-jquery[https://github.com/velesin/jasmine-jquery] library.

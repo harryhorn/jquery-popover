@@ -31,3 +31,7 @@ Original features:
 = Version 0.2.1
 
 * Improved the readme
+
+= Version 0.2.2
+
+* More readme typo fixes
