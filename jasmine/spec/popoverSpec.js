@@ -63,7 +63,7 @@ describe("Popover", function() {
 			$(document).trigger(e);
 			
 			expect($('#middle-popover')).toBeHidden();
-	  });
+	  });	
 
 	  it("can disable closing popover with Escape key", function() {
     	$('#middle').popover({header: '#header2', content: '#content2', 
@@ -77,6 +77,22 @@ describe("Popover", function() {
 			
 			expect($('#middle-popover')).toBeVisible();
 	  });
+	
+
+	  it("closing popover with Escape key should be per popover", function() {
+			// first popover does close with Esc key the second does not
+	    $('#topleft').popover({header: '#header', content: '#content', id: 'top-left-popover'});
+	  	$('#middle').popover({header: '#header2', content: '#content2', 
+					id: 'middle-popover', closeOnEsc: false});
+			$('#middle').click();
+			expect($('#middle-popover')).toBeVisible();
+		
+			var e = jQuery.Event("keydown");
+			e.keyCode = 27;
+			$(document).trigger(e);
+		
+			expect($('#middle-popover')).toBeVisible();
+	  });	
 	
 		it("can set popover offsetX", function() {
     	$('#middle').popover({header: '#header2', content: '#content2', 

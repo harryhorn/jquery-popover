@@ -46,19 +46,6 @@
 			if ($.fn.popover.openedPopup != null)
 				$.fn.popover.openedPopup.trigger('hidePopover');
 		});
-	
-		// keyboard callback
-		function keyDown(event) {
-			if (!event.altKey && !event.ctrlKey && !event.shiftKey) {
-				switch(event.keyCode) {	
-					case KEY_ESC:
-				    if ($.fn.popover.openedPopup != null) {
-				      $.fn.popover.openedPopup.trigger('hidePopover');
-				    }
-						break;
-				}
-			}
-		}
 
 		function calcPopoverDirPossible(button, coord) {
 			var possibleDir = {
@@ -261,8 +248,17 @@
 	  return this.each(function(){
 	    var button = $(this);
 	    button.addClass("popover-button");
-			if (settings.closeOnEsc)
-				$(document).bind('keydown', keyDown);
+			if (settings.closeOnEsc) {
+				$(document).bind('keydown', function(event) {
+					if (!event.altKey && !event.ctrlKey && !event.shiftKey) {
+						switch(event.keyCode) {	
+							case KEY_ESC:
+						    button.trigger('hidePopover');
+								break;
+						}
+					}
+				});
+			}
 	    button.bind('click', function() { 
 				showPopover(button);
 				return false;

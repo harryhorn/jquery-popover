@@ -89,7 +89,9 @@ Options description:
 * <tt>offsetY: 0</tt> - (Number) - Fixed Y offset for popover location
 * <tt>zindex: 100000</tt> - (Number) - css z-index of the popover
 * <tt>padding: 18</tt> - (Number) - minimum padding to be kept between popover borders and edge of document
-* <tt>closeOnEsc: true</tt> - (Boolean) - pass false to disable listening to keyboard ESC to close popover
+* <tt>closeOnEsc: true</tt> - (Boolean) - pass false to disable listening to keyboard ESC to close popover. 
+Note in Version 0.2.3 this option behavior was changed to be local to each popover and not global. 
+See <tt>CHANGELOG</tt> for details
 * <tt>preventLeft: false</tt> - (Boolean) - pass true to prevent popover from opening on left side
 * <tt>preventRight: false</tt> - (Boolean) - pass true to prevent popover from opening on right side
 * <tt>preventTop: false</tt> - (Boolean) - pass true to prevent popover from opening on top side

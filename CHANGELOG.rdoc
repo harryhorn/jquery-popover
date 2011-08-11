@@ -41,3 +41,5 @@ Original features:
 * added specs for direction algorithm
 * fixed bug in calculating window width & height
 * added specs for offsetX & offsetY options
+* made closeOnEsc specific to each popover so that disabling it for a specific popover will actually work
+even if other popovers exist where which do close on Esc
