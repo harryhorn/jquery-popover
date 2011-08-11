@@ -131,8 +131,8 @@ See <tt>demo/demo.html</tt> for a demonstration of various popovers opening on d
 
 NOTE: Newer versions of Chrome don't allow file:// URIs read other file:// URIs. In effect, jasmine-jquery cannot properly 
 load fixtures under some versions of Chrome. An override for this is to run Chrome with a switch <tt>--allow-file-access-from-files</tt> 
-(I have not verified if this works for all Chrome versions though). The full discussion on this topic can be found in this
- {GitHub ticket}[https://github.com/velesin/jasmine-jquery/issues/4].
+(I have not verified if this works for all Chrome versions though). The full discussion on this topic can be found in this GitHub 
+ticket[https://github.com/velesin/jasmine-jquery/issues/4].
 
 == License:
 
