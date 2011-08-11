@@ -78,6 +78,40 @@ describe("Popover", function() {
 			expect($('#middle-popover')).toBeVisible();
 	  });
 	
+		it("can set popover offsetX", function() {
+    	$('#middle').popover({header: '#header2', content: '#content2', 
+								id: 'middle-popover'});
+			$('#middle').click();
+			var offset = $('#middle-popover').offset();
+
+			// now clear created propover and rebuild again with offset to compare
+		  $('.popover').remove();
+		  loadFixtures('fixture1.html');
+			
+    	$('#middle').popover({header: '#header2', content: '#content2', 
+								id: 'middle-popover', offsetX: 10});
+			$('#middle').click();
+			var offset2 = $('#middle-popover').offset();
+			expect(offset2.left).toEqual(offset.left + 10);
+		});	
+	
+		it("can set popover offsetY", function() {
+    	$('#middle').popover({header: '#header2', content: '#content2', 
+								id: 'middle-popover'});
+			$('#middle').click();
+			var offset = $('#middle-popover').offset();
+
+			// now clear created propover and rebuild again with offset to compare
+		  $('.popover').remove();
+		  loadFixtures('fixture1.html');
+			
+    	$('#middle').popover({header: '#header2', content: '#content2', 
+								id: 'middle-popover', offsetY: -10});
+			$('#middle').click();
+			var offset2 = $('#middle-popover').offset();
+			expect(offset2.top).toEqual(offset.top - 10);
+		});	
+	
 		it("can set popover z-index", function() {
     	$('#middle').popover({header: '#header2', content: '#content2', 
 								id: 'middle-popover', zindex: 999});
@@ -143,6 +177,30 @@ describe("Popover", function() {
 			$('#bottomright').click();
 			expect($('.triangle', '#bottom-right-popover')).not.toHaveClass('bottom');
 			expect($('.triangle', '#bottom-right-popover')).not.toHaveClass('right');
+		});
+		
+		it("takes into account left window limits & direction options", function() {
+	    $('#middle').popover({header: '#header2', content: '#content2', 
+					id: 'middle-popover', preventLeft: true, preventRight: true});
+			$('#middle').click();					
+			expect($('.triangle', '#middle-popover')).not.toHaveClass('left');
+			expect($('.triangle', '#middle-popover')).not.toHaveClass('right');
+		});	
+
+		it("takes into account general window limits & direction options", function() {
+	    $('#middleleft').popover({header: '#header3', content: '#content3', 
+					id: 'middle-left-popover', preventTop: true});
+			$('#middleleft').click();					
+			expect($('.triangle', '#middle-left-popover')).not.toHaveClass('left');
+			expect($('.triangle', '#middle-left-popover')).not.toHaveClass('top');
+		});
+		
+		it("takes into account right window limits & direction options", function() {
+	    $('#middleright').popover({header: '#header4', content: '#content4', 
+					id: 'middle-right-popover', preventBottom: true});
+			$('#middleright').click();					
+			expect($('.triangle', '#middle-right-popover')).not.toHaveClass('bottom');
+			expect($('.triangle', '#middle-right-popover')).not.toHaveClass('right');
 		});		
 		
 	});	

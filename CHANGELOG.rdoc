@@ -28,10 +28,16 @@ Original features:
 * Reorganized directory structure
 * Added this file - yay!
 
-= Version 0.2.1
+== Version 0.2.1
 
 * Improved the readme
 
-= Version 0.2.2
+== Version 0.2.2
 
 * More readme typo fixes
+
+= Version 0.2.3
+
+* added specs for direction algorithm
+* fixed bug in calculating window width & height
+* added specs for offsetX & offsetY options
