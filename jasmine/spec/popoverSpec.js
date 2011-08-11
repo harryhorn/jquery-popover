@@ -112,8 +112,40 @@ describe("Popover", function() {
 						id: 'middle-popover', preventBottom: true, preventRight: true, preventLeft: true});
 			$('#middle').click();
 			expect($('.triangle', '#middle-popover')).toHaveClass('top');
-		});		
+		});
 	});
+	
+	describe("direction algorithm", function() {
+		
+		it("takes into account top left corner", function() {
+	    $('#topleft').popover({header: '#header', content: '#content', id: 'top-left-popover'});
+			$('#topleft').click();
+			expect($('.triangle', '#top-left-popover')).not.toHaveClass('top');
+			expect($('.triangle', '#top-left-popover')).not.toHaveClass('left');
+		});
+
+		it("takes into account top right corner", function() {
+	    $('#topright').popover({header: '#header', content: '#content', id: 'top-right-popover'});
+			$('#topright').click();
+			expect($('.triangle', '#top-right-popover')).not.toHaveClass('top');
+			expect($('.triangle', '#top-right-popover')).not.toHaveClass('right');
+		});
+
+		it("takes into account bottom left corner", function() {
+	    $('#bottomleft').popover({header: '#header', content: '#content', id: 'bottom-left-popover'});
+			$('#bottomleft').click();
+			expect($('.triangle', '#bottom-left-popover')).not.toHaveClass('bottom');
+			expect($('.triangle', '#bottom-left-popover')).not.toHaveClass('left');
+		});
+		
+		it("takes into account bottom right corner", function() {
+	    $('#bottomright').popover({header: '#header', content: '#content', id: 'bottom-right-popover'});
+			$('#bottomright').click();
+			expect($('.triangle', '#bottom-right-popover')).not.toHaveClass('bottom');
+			expect($('.triangle', '#bottom-right-popover')).not.toHaveClass('right');
+		});		
+		
+	});	
 	
 	
 	describe("events", function() {
@@ -162,6 +194,7 @@ describe("Popover", function() {
 			$('#middle').trigger('hidePopover');			
 			expect('popoverClosed').toHaveBeenTriggeredOn($(document));
 		});
+		
 	});
 	
 	
@@ -194,20 +227,17 @@ describe("Popover", function() {
 			expect($('#middle-right-popover')).toBeVisible();	
 		});
 		
-		it("supports popover buttons created dynamically", function() {
-	    $('.box').popover({header: '#header5', content: '#content5', id: 'box-popover', live: true});
-			$('#box1').click();
-			expect($('#box-popover')).toBeVisible();
-			$('#box1').click();
-			expect($('#box-popover')).toBeHidden();
-			$('body').append($("<div class='test-but box' id='box2'>Click me</div>"));
-			$('#box2').click();
-			expect($('#box-popover')).toBeVisible();			
-		});
+		// it("supports popover buttons created dynamically", function() {
+		// 	    $('.box').popover({header: '#header5', content: '#content5', id: 'box-popover', live: true});
+		// 	$('#box1').click();
+		// 	expect($('#box-popover')).toBeVisible();
+		// 	$('#box1').click();
+		// 	expect($('#box-popover')).toBeHidden();
+		// 	$('body').append($("<div class='test-but box' id='box2'>Click me</div>"));
+		// 	$('#box2').click();
+		// 	expect($('#box-popover')).toBeVisible();			
+		// });
 		
-
-	
-
 	});	
 
 });

@@ -137,8 +137,8 @@
 				triangleX: 0,
 				triangleY: 0,
 		    triangleSize: 20, // needs to be updated if triangle changed in css
-		    docWidth: $(document).width(),
-		    docHeight: $(document).height(),
+		    docWidth: $(window).width(),
+		    docHeight: $(window).height(),
 		    popoverWidth: settings.popover$.outerWidth(),
 		    popoverHeight: settings.popover$.outerHeight(),
 		    buttonWidth: button.outerWidth(),
