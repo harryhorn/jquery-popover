@@ -162,6 +162,7 @@ load fixtures under some versions of Chrome. An override for this is to run Chro
 (I have not verified if this works for all Chrome versions though). The full discussion on this topic can be found in this GitHub 
 ticket[https://github.com/velesin/jasmine-jquery/issues/4].
 
+
 == License:
 
 (The MIT License)
