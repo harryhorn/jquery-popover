@@ -1,16 +1,16 @@
-= JQuery-popover
+= jQuery-popover
 
 * http://github.com/harryhorn/jquery-popover
 
 == Description:
 
-JQuery-popover is a JQuery plugin that provides an easy way to create iPad like popovers.
+jQuery-popover is a jQuery plugin that provides an easy way to create iPad like popovers.
 
 http://github.com/harryhorn/jquery-popover/raw/master/jquery.popover.png
  
 Forked and based on {juggy/jquery-popover}[http://github.com/juggy/jquery-popover] by Julien Guimont.
  
-JQuery-popover has been significantly refactored & enhanced. See details below.
+jQuery-popover has been significantly refactored & enhanced. See details below.
 
 == Install
 
@@ -22,8 +22,8 @@ Simply:
 
 == How to use
 
-With JQuery-popover you can attach a popover to the click 
-action of any DOM element. You set the popover header and content by providing a JQuery selector. For example:
+With jQuery-popover you can attach a popover to the click 
+action of any DOM element. You set the popover header and content by providing a jQuery selector. For example:
 
     <a id="my-button">Popover</a>
 
@@ -42,21 +42,21 @@ action of any DOM element. You set the popover header and content by providing a
 
     $('#my-button').popover({header: '#my-popover > .header', content: '#my-popover > .content'});
 
-JQuery popover detaches the header and content from their original DOM location and attaches them to the hidden popover.
+jQuery popover detaches the header and content from their original DOM location and attaches them to the hidden popover.
 Based on the size and location of the popover as it relates to the originating element, the popover will be optimally placed
 on the screen. The popup can appear on all 4 sides of the originating element. To limit the popup to certain directions see 
 Options Documentation below.
 
 As of version 0.3.0 it is also possible to create popups on yet to be created buttons by using the <tt>live</tt> option. 
-Internally this uses the JQuery <tt>live</tt> function to listen to events on buttons that match the selector used 
+Internally this uses the jQuery <tt>live</tt> function to listen to events on buttons that match the selector used 
 in the popover call, for example:
 
     $('.button').popover({header: '#my-popover > .header', content: '#my-popover > .content', live: true});
 
 This is useful when you wish to attach a popover to dynamic buttons that may be created later on via AJAX or other means.
-By default, the <tt>live</tt> option is false and the JQuery <tt>bind</tt> function will be used to attach the popover only to 
+By default, the <tt>live</tt> option is false and the jQuery <tt>bind</tt> function will be used to attach the popover only to 
 existing elements that match the selector at call time. 
-The only limitation in this case is that, similar to the JQuery <tt>live</tt> function, the popover plugin can only be used
+The only limitation in this case is that, similar to the jQuery <tt>live</tt> function, the popover plugin can only be used
 with selectors and not with derived wrapped sets.
 
 == Features & changes
@@ -76,7 +76,7 @@ New features:
 * Optional z-index value for popup
 
 Other changes:
-* Changes plugin name to jquery.popover.js to follow jquery conventions
+* Changes plugin name to jquery.popover.js to follow jQuery conventions
 * Popover wrapper method now returns the wrapped set
 * Fixed various bugs
 * General cleanup and code refactoring of JS and CSS
@@ -99,8 +99,8 @@ the wrapped set.
 
 Options description:
 
-* <tt>header</tt> - <b>required</b> - (Selector|Element) - JQuery selector for popover header 
-* <tt>content</tt> - <b>required</b> - (Selector|Element) - JQuery selector for popover content 
+* <tt>header</tt> - <b>required</b> - (Selector|Element) - jQuery selector for popover header 
+* <tt>content</tt> - <b>required</b> - (Selector|Element) - jQuery selector for popover content 
 * <tt>id: ''</tt> - (String) - id for created popover
 * <tt>openEvent: null</tt> - (Function) - callback function to be called after popover is opened. 
 Clicked button is passed as a parameter to the function
@@ -117,7 +117,7 @@ See <tt>CHANGELOG</tt> for details
 * <tt>preventRight: false</tt> - (Boolean) - pass true to prevent popover from opening on right side
 * <tt>preventTop: false</tt> - (Boolean) - pass true to prevent popover from opening on top side
 * <tt>preventBottom: false</tt> - (Boolean) - pass true to prevent popover from opening on bottom side
-* <tt>live: false</tt> - (Boolean) - pass true to create a popover on a selector using JQuery <tt>live</tt>.
+* <tt>live: false</tt> - (Boolean) - pass true to create a popover on a selector using jQuery <tt>live</tt>.
 See section 'How to use' above for details
 
 == Supported events

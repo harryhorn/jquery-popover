@@ -38,7 +38,7 @@ New features:
 * Optional z-index value for popup
 
 Other changes:
-* Changes plugin name to jquery.popover.js to follow jquery conventions
+* Changes plugin name to jquery.popover.js to follow jQuery conventions
 * Popover wrapper method now returns the wrapped set
 * Fixed various bugs
 * General cleanup and code refactoring of JS and CSS
