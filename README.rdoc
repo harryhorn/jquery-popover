@@ -148,15 +148,15 @@ SCSS and compass.
 
 If you change the size of the triangle in CSS you need to also update this size in <tt>function calcPopoverPos</tt> in the plugin JS file.
 
-== Specing & Testing
+== Demo & specs
+
+Open <tt>demo/demo.html</tt> for a demonstration of various popovers opening on different sides based on constraints as
+well as a demonstration of live popup buttons.
 
 A suite of Jasmine[http://github.com/pivotal/jasmine] specs has been added that also make use
 of the Jasmine-jquery[https://github.com/velesin/jasmine-jquery] library.
 
 To run the Jasmine specs simply open <tt>jasmine/SpecRunner.html</tt> in a browser.
-
-See <tt>demo/demo.html</tt> for a demonstration of various popovers opening on different sides based on constraints as
-well as a demonstration of live popup buttons.
 
 NOTE: Newer versions of Chrome don't allow file:// URIs to read other file:// URIs. In effect, jasmine-jquery cannot properly 
 load fixtures under some versions of Chrome. An override for this is to run Chrome with a switch <tt>--allow-file-access-from-files</tt> 
