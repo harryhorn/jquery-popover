@@ -23,7 +23,7 @@ Simply:
 == How to use
 
 With JQuery-popover you can attach a popover to the click 
-action of any DOM element. You set the popover header and content by providing a JQuery selector. For Example:
+action of any DOM element. You set the popover header and content by providing a JQuery selector. For example:
 
     <a id="my-button">Popover</a>
 
@@ -47,7 +47,26 @@ Based on the size and location of the popover as it relates to the originating e
 on the screen. The popup can appear on all 4 sides of the originating element. To limit the popup to certain directions see 
 Options Documentation below.
 
+As of version 0.3.0 it is also possible to create popups on yet to be created buttons by using the <tt>live</tt> option. 
+Internally this uses the JQuery <tt>live</tt> function to listen to events on buttons that match the selector used 
+in the popover call, for example:
+
+    $('.button').popover({header: '#my-popover > .header', content: '#my-popover > .content', live: true});
+
+This is useful when you wish to attach a popover to dynamic buttons that may be created later on via AJAX or other means.
+By default, the <tt>live</tt> option is false and the JQuery <tt>bind</tt> function will be used to attach the popover only to 
+existing elements that match the selector at call time. 
+The only limitation in this case is that, similar to the JQuery <tt>live</tt> function, the popover plugin can only be used
+with selectors and not with derived wrapped sets.
+
 == Features & changes
+
+New features and changes for version 0.3.0:
+* <tt>live</tt> option that enables creating popovers for dynamically created buttons (see description below)
+* The openEvent & closeEvent callbacks now get called with a wrapped button parameter on which the event occurred
+* Changed the name of the event to trigger to close any open popup to 'hideOpenPopover'
+* Cleaned up and re-factored the code
+* Enhanced the demo HTML to include some live popups
 
 New features:
 * Popover can now be created on all sides of originating button
@@ -83,8 +102,10 @@ Options description:
 * <tt>header</tt> - <b>required</b> - (Selector|Element) - JQuery selector for popover header 
 * <tt>content</tt> - <b>required</b> - (Selector|Element) - JQuery selector for popover content 
 * <tt>id: ''</tt> - (String) - id for created popover
-* <tt>openEvent: null</tt> - (Function) - callback function to be called after popover is opened
-* <tt>closeEvent: null</tt> - (Function) - callback function to be called after popover is closed
+* <tt>openEvent: null</tt> - (Function) - callback function to be called after popover is opened. 
+Clicked button is passed as a parameter to the function
+* <tt>closeEvent: null</tt> - (Function) - callback function to be called after popover is closed.
+Clicked button is passed as a parameter to the function
 * <tt>offsetX: 0</tt> - (Number) - Fixed X offset for popover location
 * <tt>offsetY: 0</tt> - (Number) - Fixed Y offset for popover location
 * <tt>zindex: 100000</tt> - (Number) - css z-index of the popover
@@ -96,6 +117,8 @@ See <tt>CHANGELOG</tt> for details
 * <tt>preventRight: false</tt> - (Boolean) - pass true to prevent popover from opening on right side
 * <tt>preventTop: false</tt> - (Boolean) - pass true to prevent popover from opening on top side
 * <tt>preventBottom: false</tt> - (Boolean) - pass true to prevent popover from opening on bottom side
+* <tt>live: false</tt> - (Boolean) - pass true to create a popover on a selector using JQuery <tt>live</tt>.
+See section 'How to use' above for details
 
 == Supported events
 
@@ -108,9 +131,11 @@ You can programmatically open and close a popover by using the following:
 
     $('#button').trigger('hidePopover'); 
 
-To close the currently open popover, for example from the cancel button of a popup dialog, do the following:
+To close the currently open popover without knowing it's originating button, do the following:
 
-    $(document).trigger('hidePopover');
+    $(document).trigger('hideOpenPopover');
+
+NOTE: the name of this event changed in version 0.3.0 from <tt>hidePopover</tt> to <tt>hideOpenPopover</tt>
 
 == Popover styling
 
@@ -129,9 +154,10 @@ of the Jasmine-jquery[https://github.com/velesin/jasmine-jquery] library.
 
 To run the Jasmine specs simply open <tt>jasmine/SpecRunner.html</tt> in a browser.
 
-See <tt>demo/demo.html</tt> for a demonstration of various popovers opening on different sides based on constraints.
+See <tt>demo/demo.html</tt> for a demonstration of various popovers opening on different sides based on constraints as
+well as a demonstration of live popup buttons.
 
-NOTE: Newer versions of Chrome don't allow file:// URIs read other file:// URIs. In effect, jasmine-jquery cannot properly 
+NOTE: Newer versions of Chrome don't allow file:// URIs to read other file:// URIs. In effect, jasmine-jquery cannot properly 
 load fixtures under some versions of Chrome. An override for this is to run Chrome with a switch <tt>--allow-file-access-from-files</tt> 
 (I have not verified if this works for all Chrome versions though). The full discussion on this topic can be found in this GitHub 
 ticket[https://github.com/velesin/jasmine-jquery/issues/4].

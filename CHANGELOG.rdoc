@@ -1,3 +1,33 @@
+= Version 0.3.0
+
+* Added support for popovers on dynamically created buttons
+* Now passing button parameter to openEvent & closeEvent callbacks
+* Changed event to trigger to close any open popup to 'hideOpenPopover'
+* Cleaned up and re-factored the code
+* Enhanced the demo HTML to include some live popups
+
+== Version 0.2.3
+
+* Added specs for direction algorithm
+* Fixed bug in calculating window width & height
+* Added specs for offsetX & offsetY options
+* Made closeOnEsc specific to each popover so that disabling it for a specific popover will actually work
+even if other popovers exist which do close on Esc
+
+== Version 0.2.2
+
+* More readme typo fixes
+
+== Version 0.2.1
+
+* Improved the readme
+
+= Version 0.2.0
+
+* Added jasmine specs
+* Reorganized directory structure
+* Added this file - yay!
+
 = Early Versions
 
 New features:
@@ -21,25 +51,3 @@ Original features:
 * Optional offset for popover origin
 * Optional popup opened event callback
 * Optional popup closed event callback
-
-= Version 0.2.0
-
-* Added jasmine specs
-* Reorganized directory structure
-* Added this file - yay!
-
-== Version 0.2.1
-
-* Improved the readme
-
-== Version 0.2.2
-
-* More readme typo fixes
-
-= Version 0.2.3
-
-* added specs for direction algorithm
-* fixed bug in calculating window width & height
-* added specs for offsetX & offsetY options
-* made closeOnEsc specific to each popover so that disabling it for a specific popover will actually work
-even if other popovers exist which do close on Esc

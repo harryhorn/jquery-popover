@@ -250,7 +250,7 @@ describe("Popover", function() {
 		it("can close popover with 'hidePopover' document event", function() {
     	$('#middle').popover({header: '#header2', content: '#content2', id: 'middle-popover'});
 			$('#middle').click();
-			$(document).trigger('hidePopover');
+			$(document).trigger('hideOpenPopover');
 			expect($('#middle-popover')).toBeHidden();			
 		});
 		
@@ -301,16 +301,23 @@ describe("Popover", function() {
 			expect($('#middle-right-popover')).toBeVisible();	
 		});
 		
-		// it("supports popover buttons created dynamically", function() {
-		// 	    $('.box').popover({header: '#header5', content: '#content5', id: 'box-popover', live: true});
-		// 	$('#box1').click();
-		// 	expect($('#box-popover')).toBeVisible();
-		// 	$('#box1').click();
-		// 	expect($('#box-popover')).toBeHidden();
-		// 	$('body').append($("<div class='test-but box' id='box2'>Click me</div>"));
-		// 	$('#box2').click();
-		// 	expect($('#box-popover')).toBeVisible();			
-		// });
+		it("supports popover on dynamically created buttons", function() {
+			$('.box').popover({header: '#header5', content: '#content5', id: 'box-popover', live: true});
+			$('#box1').click();
+			expect($('#box-popover')).toBeVisible();
+			$('#box1').click();
+			expect($('#box-popover')).toBeHidden();
+			$('body').append($("<div class='test-but box' id='box2'>Click me</div>"));
+			$('#box2').click();
+			expect($('#box-popover')).toBeVisible();
+			
+			var e = jQuery.Event("keydown");
+			e.keyCode = 27;
+			$(document).trigger(e);
+			expect($('#box-popover')).toBeHidden();
+			
+			this.after(function() { $('#box2').remove(); });
+		});
 		
 	});	
 
