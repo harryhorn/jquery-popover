@@ -104,9 +104,9 @@ Options description:
 * <tt>content</tt> - <b>required</b> - (Selector|Element) - jQuery selector for popover content 
 * <tt>id: ''</tt> - (String) - id for created popover
 * <tt>openEvent: null</tt> - (Function) - callback function to be called after popover is opened. 
-Clicked button is passed as a parameter to the function
+The originating button is passed as a parameter to the function
 * <tt>closeEvent: null</tt> - (Function) - callback function to be called after popover is closed.
-Clicked button is passed as a parameter to the function
+The originating button is passed as a parameter to the function
 * <tt>offsetX: 0</tt> - (Number) - Fixed X offset for popover location
 * <tt>offsetY: 0</tt> - (Number) - Fixed Y offset for popover location
 * <tt>zindex: 100000</tt> - (Number) - css z-index of the popover
