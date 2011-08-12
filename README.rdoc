@@ -42,10 +42,10 @@ action of any DOM element. You set the popover header and content by providing a
 
     $('#my-button').popover({header: '#my-popover > .header', content: '#my-popover > .content'});
 
-jQuery popover detaches the header and content from their original DOM location and attaches them to the hidden popover.
+jQuery-popover detaches the header and content from their original DOM location and attaches them to the hidden popover.
 Based on the size and location of the popover as it relates to the originating element, the popover will be optimally placed
 on the screen. The popup can appear on all 4 sides of the originating element. To limit the popup to certain directions see 
-Options Documentation below.
+options documentation section below.
 
 As of version 0.3.0 it is also possible to create popups on yet to be created buttons by using the <tt>live</tt> option. 
 Internally this uses the jQuery <tt>live</tt> function to listen to events on buttons that match the selector used 
@@ -54,18 +54,19 @@ in the popover call, for example:
     $('.button').popover({header: '#my-popover > .header', content: '#my-popover > .content', live: true});
 
 This is useful when you wish to attach a popover to dynamic buttons that may be created later on via AJAX or other means.
-By default, the <tt>live</tt> option is false and the jQuery <tt>bind</tt> function will be used to attach the popover only to 
-existing elements that match the selector at call time. 
 The only limitation in this case is that, similar to the jQuery <tt>live</tt> function, the popover plugin can only be used
 with selectors and not with derived wrapped sets.
+
+By default, the <tt>live</tt> option is false and the jQuery <tt>bind</tt> function will be used to attach the popover only to 
+existing elements that match the selector at call time.
 
 == Features & changes
 
 New features and changes for version 0.3.0:
 * <tt>live</tt> option that enables creating popovers for dynamically created buttons (see description below)
-* The openEvent & closeEvent callbacks now get called with a wrapped button parameter on which the event occurred
-* Changed the name of the event to trigger to close any open popup to 'hideOpenPopover'
-* Cleaned up and re-factored the code
+* The <tt>openEvent</tt> & <tt>closeEvent</tt> callbacks now get called with a wrapped button parameter on which the event occurred
+* Changed the name of the event to trigger to close any open popup to <tt>hideOpenPopover</tt>
+* Cleaned and re-factored the code
 * Enhanced the demo HTML to include some live popups
 
 New features:

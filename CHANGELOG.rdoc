@@ -3,7 +3,7 @@
 * Added support for popovers on dynamically created buttons
 * Now passing button parameter to openEvent & closeEvent callbacks
 * Changed event to trigger to close any open popup to 'hideOpenPopover'
-* Cleaned up and re-factored the code
+* Cleaned and re-factored the code
 * Enhanced the demo HTML to include some live popups
 
 == Version 0.2.3
