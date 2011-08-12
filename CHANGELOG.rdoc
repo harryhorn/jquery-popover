@@ -6,6 +6,24 @@
 * Cleaned and re-factored the code
 * Enhanced the demo HTML to include some live popups
 
+== Version 0.3.1
+
+* Various minor readme & demo typo fixes
+
+= Version 0.2.0
+
+* Added jasmine specs
+* Reorganized directory structure
+* Added this file - yay!
+
+== Version 0.2.1
+
+* Improved the readme
+
+== Version 0.2.2
+
+* More readme typo fixes
+
 == Version 0.2.3
 
 * Added specs for direction algorithm
@@ -13,20 +31,6 @@
 * Added specs for offsetX & offsetY options
 * Made closeOnEsc specific to each popover so that disabling it for a specific popover will actually work
 even if other popovers exist which do close on Esc
-
-== Version 0.2.2
-
-* More readme typo fixes
-
-== Version 0.2.1
-
-* Improved the readme
-
-= Version 0.2.0
-
-* Added jasmine specs
-* Reorganized directory structure
-* Added this file - yay!
 
 = Early Versions
 
