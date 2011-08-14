@@ -144,7 +144,7 @@ The popover style provided in jquery.popover.css is a basic style to mimic the i
 You should keep all the original class names used in the file as they are the ones used by the plugin.
 
 You can use the original <tt>lib/jquery.popover.scss</tt> to generate a new jquery.popover.css file if you prefer working with
-SASS[http://sass-lang.com/] and Compass[http://compass-style.org/].
+Sass[http://sass-lang.com/] and Compass[http://compass-style.org/].
 
 If you change the size of the triangle in CSS you need to also update this size in <tt>function calcPopoverPos</tt> in the plugin JS file.
 
