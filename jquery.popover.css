@@ -1,4 +1,4 @@
-/* line 5, ../../app/stylesheets/popover.scss */
+/* line 5, ../sass/jquery.popover.scss */
 .popover {
   position: absolute;
   display: none;
@@ -30,11 +30,11 @@
   -o-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-/* line 17, ../../app/stylesheets/popover.scss */
+/* line 17, ../sass/jquery.popover.scss */
 .popover.active {
   opacity: 1;
 }
-/* line 21, ../../app/stylesheets/popover.scss */
+/* line 21, ../sass/jquery.popover.scss */
 .popover > .triangle {
   position: absolute;
   width: 0px;
@@ -43,27 +43,27 @@
   border-right: 20px solid transparent;
   border-top: 20px solid transparent;
 }
-/* line 29, ../../app/stylesheets/popover.scss */
+/* line 29, ../sass/jquery.popover.scss */
 .popover > .triangle.top {
   bottom: -40px;
   border-top: 20px solid black;
 }
-/* line 34, ../../app/stylesheets/popover.scss */
+/* line 34, ../sass/jquery.popover.scss */
 .popover > .triangle.bottom {
   top: -40px;
   border-bottom: 20px solid black;
 }
-/* line 39, ../../app/stylesheets/popover.scss */
+/* line 39, ../sass/jquery.popover.scss */
 .popover > .triangle.left {
   right: -40px;
   border-left: 20px solid black;
 }
-/* line 44, ../../app/stylesheets/popover.scss */
+/* line 44, ../sass/jquery.popover.scss */
 .popover > .triangle.right {
   left: -40px;
   border-right: 20px solid black;
 }
-/* line 50, ../../app/stylesheets/popover.scss */
+/* line 50, ../sass/jquery.popover.scss */
 .popover > .header {
   font-weight: bold;
   margin: 0;
@@ -75,12 +75,21 @@
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
   background-image: -o-linear-gradient(rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
   background-image: linear-gradient(rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
   text-align: center;
 }
-/* line 64, ../../app/stylesheets/popover.scss */
+/* line 64, ../sass/jquery.popover.scss */
 .popover > .content {
   min-width: 15em;
   overflow-x: hidden;
   overflow-y: auto;
+}
+/* line 70, ../sass/jquery.popover.scss */
+.popover > .footer {
+  min-width: 15em;
+  overflow: hidden;
+  background-color: #2B1E0B;
+  color: #EADC9F;
+  padding: 5px;
 }

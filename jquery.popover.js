@@ -244,9 +244,13 @@
 					+ '<div class="triangle"></div>'
 					+ '<div class="header"></div>'
 					+ '<div class="content"></div>'
+					+ '<div class="footer"></div>'
 					+ '</div>').appendTo('body');
 		$('.header', settings.popover$).append($(settings.header).detach());
 		$('.content', settings.popover$).append($(settings.content).detach());
+		!!settings.footer 
+			? $('.footer', settings.popover$).append($(settings.footer).detach())
+			: $('.footer', settings.popover$).hide();
 
 		settings.triangle$ = $('.triangle', settings.popover$);
 
