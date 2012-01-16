@@ -66,4 +66,10 @@ $triangle-size: 20px;
     overflow-x: hidden;
     overflow-y: auto;
 	}
+
+  & > .footer {
+    min-width: 15em;
+    overflow: hidden;
+    background-color: #ccc;
+  }
 }
