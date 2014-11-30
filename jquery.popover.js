@@ -244,9 +244,18 @@
 					+ '<div class="triangle"></div>'
 					+ '<div class="header"></div>'
 					+ '<div class="content"></div>'
+					+ '<div class="footer"></div>'
 					+ '</div>').appendTo('body');
-		$('.header', settings.popover$).append($(settings.header).detach());
+		// optional header
+		!!settings.header
+			? $('.header', settings.popover$).append($(settings.header).detach())
+			: $('.header', settings.popover$).hide();
+		// mandatory content
 		$('.content', settings.popover$).append($(settings.content).detach());
+		// optional footer
+		!!settings.footer
+			? $('.footer', settings.popover$).append($(settings.footer).detach())
+			: $('.footer', settings.popover$).hide();
 
 		settings.triangle$ = $('.triangle', settings.popover$);
 

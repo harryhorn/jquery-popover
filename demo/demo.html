@@ -24,7 +24,9 @@
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p> 
+    </p>
+    <div id='footer'>Optional popover footer content goes here.</div>
+
     <div id='header2'>Popover header</div> 
     <p id='content2'> 
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -64,8 +66,12 @@
 		</p>
 
     <script type="text/javascript"> 
-	    $('#topleft, #topright, #bottomleft, #bottomright').popover({header: '#header', content: '#content'});
-	    $('#middle').popover({header: '#header2', content: '#content2', preventLeft: true, preventRight: true});
+	    $('#topleft, #topright, #bottomleft, #bottomright').popover({
+        header: '#header', 
+        content: '#content', 
+        footer: '#footer'
+      });
+	    $('#middle').popover({content: '#content2', preventLeft: true, preventRight: true});
 	    $('#middleleft').popover({header: '#header3', content: '#content3', preventTop: true});
 	    $('#middleright').popover({header: '#header4', content: '#content4', preventBottom: true});
 	

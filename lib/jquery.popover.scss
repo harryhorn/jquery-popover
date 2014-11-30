@@ -10,13 +10,13 @@ $triangle-size: 20px;
   color: black;
   background-color: white;
   border: 3px solid black;
-	@include border-radius(4px);
-	@include box-shadow(rgba(0, 0, 0, 0.2), 0, 0, 20px);
-	@include transition(opacity, 0.25s, linear);
+  @include border-radius(4px);
+  @include box-shadow(rgba(0, 0, 0, 0.2), 0, 0, 20px);
+  @include transition(opacity, 0.25s, linear);
   
   &.active {
     opacity: 1;
-	}		
+  }   
   
   & > .triangle {
     position: absolute;
@@ -24,28 +24,28 @@ $triangle-size: 20px;
     border-bottom: $triangle-size solid transparent;
     border-left: $triangle-size solid transparent;
     border-right: $triangle-size solid transparent;
-    border-top: $triangle-size solid transparent;		
+    border-top: $triangle-size solid transparent;   
 
-		&.top {
-    	bottom: -$triangle-size * 2;
-	    border-top: $triangle-size solid black;			
-		}
-		
-		&.bottom {
-	    top: -$triangle-size * 2;
-	    border-bottom: $triangle-size solid black;			
-		}
+    &.top {
+      bottom: -$triangle-size * 2;
+      border-top: $triangle-size solid black;     
+    }
+    
+    &.bottom {
+      top: -$triangle-size * 2;
+      border-bottom: $triangle-size solid black;      
+    }
 
-		&.left {
-    	right: -$triangle-size * 2;
-	    border-left: $triangle-size solid black;
-		}
-		
-		&.right {
-	    left: -$triangle-size * 2;
-	    border-right: $triangle-size solid black;		
-		}
-	}
+    &.left {
+      right: -$triangle-size * 2;
+      border-left: $triangle-size solid black;
+    }
+    
+    &.right {
+      left: -$triangle-size * 2;
+      border-right: $triangle-size solid black;   
+    }
+  }
   
   & > .header {
     font-weight: bold;
@@ -54,10 +54,10 @@ $triangle-size: 20px;
     height: 1.25em;
     color: white;
     background-color: black;
-  	@include background-image(linear-gradient(color-stops(rgba(255, 255, 255, 0.4) 0.2, 
-																	rgba(255, 255, 255, 0.2) 0.5,
-																	rgba(255, 255, 255, 0) 0.5,
-																 	rgba(255, 255, 255, 0))));
+    @include background-image(linear-gradient(color-stops(rgba(255, 255, 255, 0.4) 0.2, 
+                                  rgba(255, 255, 255, 0.2) 0.5,
+                                  rgba(255, 255, 255, 0) 0.5,
+                                  rgba(255, 255, 255, 0))));
     text-align: center;
   }
 
@@ -65,5 +65,13 @@ $triangle-size: 20px;
     min-width: 15em;
     overflow-x: hidden;
     overflow-y: auto;
-	}
+  }
+
+  & > .footer {
+    min-width: 15em;
+    overflow: hidden;
+    background-color: #2B1E0B;
+    color: #EADC9F;
+    padding: 5px;
+  }
 }
